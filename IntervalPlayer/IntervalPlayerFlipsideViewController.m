@@ -15,13 +15,14 @@
 @implementation IntervalPlayerFlipsideViewController
 @synthesize intervalOne;
 @synthesize intervalTwo;
+@synthesize songListView1;
+@synthesize songListView2;
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     intervalOne = [[NSMutableArray alloc] init];
     intervalTwo = [[NSMutableArray alloc] init];
-        // Do any additional setup after loading the view, typically from a nib.
 }
 
 - (void)didReceiveMemoryWarning
@@ -64,15 +65,18 @@
         if (playlistToAssignTo == 1) {
             for (int i=0; i < [[mediaItemCollection items] count]; i++) {
                 MPMediaItem *item = [[mediaItemCollection items] objectAtIndex:i];
-                [intervalOne addObject:[item valueForProperty:MPMediaItemPropertyAssetURL]];
-                }
+                //[intervalOne addObject:[item valueForProperty:MPMediaItemPropertyAssetURL]];
+                [intervalOne addObject:item];
+            }
        } else if (playlistToAssignTo == 2) {
             for (int i=0; i < [[mediaItemCollection items] count]; i++) {
                 MPMediaItem *item = [[mediaItemCollection items] objectAtIndex:i];
-                [intervalTwo addObject:[item valueForProperty:MPMediaItemPropertyAssetURL]];
+                [intervalTwo addObject:item];
                 }
         }
     }
+    [songListView1 reloadData];
+    [songListView2 reloadData];
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
@@ -90,5 +94,40 @@
 {
     // WIPE INTERVALTWO
     // BLANK UISCROLLVIEW
+}
+- (void)viewDidUnload {
+    [self setSongListView1:nil];
+    [self setSongListView2:nil];
+    [super viewDidUnload];
+}
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    // Return the number of sections.
+    return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    if (tableView == self.songListView1) {
+        return [[self intervalOne] count];
+    } else {
+        return [[self intervalTwo] count];
+    }
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"UITableViewCell"];
+    if (!cell) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"UITableViewCell"];
+    }
+    NSString *contentForThisRow;
+    if (tableView == self.songListView1) {
+        contentForThisRow = [[intervalOne objectAtIndex:[indexPath row]] valueForProperty:MPMediaItemPropertyTitle];
+    } else {
+        contentForThisRow = [[intervalTwo objectAtIndex:[indexPath row]] valueForProperty:MPMediaItemPropertyTitle];
+    }
+    [[cell textLabel] setText:contentForThisRow];
+    return cell;
 }
 @end

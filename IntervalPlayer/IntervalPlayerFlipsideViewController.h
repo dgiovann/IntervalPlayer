@@ -21,6 +21,9 @@
 }
 
 @property (weak, nonatomic) id <IntervalPlayerFlipsideViewControllerDelegate> delegate;
+@property (weak, nonatomic) IBOutlet UITableView *songListView1;
+@property (weak, nonatomic) IBOutlet UITableView *songListView2;
+
 @property (nonatomic, retain) NSMutableArray *intervalOne; // SHOULD BE AN ARRAY OF NSURLs
 @property (nonatomic, retain) NSMutableArray *intervalTwo; // SHOULD BE AN ARRAY OF NSURLs
 

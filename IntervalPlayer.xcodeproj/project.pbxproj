@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1429266516BCEE420033CE87 /* basicbeep.caf in Resources */ = {isa = PBXBuildFile; fileRef = 1429266416BCEE420033CE87 /* basicbeep.caf */; };
+		14690BA816D2F5620078B311 /* AVQueuePlayerPrevious.m in Sources */ = {isa = PBXBuildFile; fileRef = 14690BA716D2F5620078B311 /* AVQueuePlayerPrevious.m */; };
 		14D389E416A9B1E800371BAB /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14D389E316A9B1E800371BAB /* CoreMedia.framework */; };
 		14DB86D616A0BEB400D54CDA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14DB86D516A0BEB400D54CDA /* UIKit.framework */; };
 		14DB86D816A0BEB400D54CDA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14DB86D716A0BEB400D54CDA /* Foundation.framework */; };
@@ -23,7 +25,6 @@
 		14DB86F816A0BEB400D54CDA /* IntervalPlayerFlipsideViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14DB86F616A0BEB400D54CDA /* IntervalPlayerFlipsideViewController.xib */; };
 		14DB86FF16A0C35A00D54CDA /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14DB86FE16A0C35A00D54CDA /* MediaPlayer.framework */; };
 		14DB872016A0EDDC00D54CDA /* NextButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 14DB871B16A0EDDC00D54CDA /* NextButton.png */; };
-		14DB872116A0EDDC00D54CDA /* noArtworkImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 14DB871C16A0EDDC00D54CDA /* noArtworkImage.png */; };
 		14DB872216A0EDDC00D54CDA /* pauseButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 14DB871D16A0EDDC00D54CDA /* pauseButton.png */; };
 		14DB872316A0EDDC00D54CDA /* playButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 14DB871E16A0EDDC00D54CDA /* playButton.png */; };
 		14DB872416A0EDDC00D54CDA /* PreviousButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 14DB871F16A0EDDC00D54CDA /* PreviousButton.png */; };
@@ -31,6 +32,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1429266416BCEE420033CE87 /* basicbeep.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = basicbeep.caf; path = IntervalPlayer/basicbeep.caf; sourceTree = "<group>"; };
+		14690BA616D2F5620078B311 /* AVQueuePlayerPrevious.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVQueuePlayerPrevious.h; sourceTree = "<group>"; };
+		14690BA716D2F5620078B311 /* AVQueuePlayerPrevious.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVQueuePlayerPrevious.m; sourceTree = "<group>"; };
 		14D389E316A9B1E800371BAB /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 		14DB86D116A0BEB400D54CDA /* IntervalPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IntervalPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		14DB86D516A0BEB400D54CDA /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -53,7 +57,6 @@
 		14DB86F716A0BEB400D54CDA /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/IntervalPlayerFlipsideViewController.xib; sourceTree = "<group>"; };
 		14DB86FE16A0C35A00D54CDA /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		14DB871B16A0EDDC00D54CDA /* NextButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NextButton.png; sourceTree = "<group>"; };
-		14DB871C16A0EDDC00D54CDA /* noArtworkImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = noArtworkImage.png; sourceTree = "<group>"; };
 		14DB871D16A0EDDC00D54CDA /* pauseButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pauseButton.png; sourceTree = "<group>"; };
 		14DB871E16A0EDDC00D54CDA /* playButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = playButton.png; sourceTree = "<group>"; };
 		14DB871F16A0EDDC00D54CDA /* PreviousButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PreviousButton.png; sourceTree = "<group>"; };
@@ -80,6 +83,7 @@
 		14DB86C616A0BEB400D54CDA = {
 			isa = PBXGroup;
 			children = (
+				1429266416BCEE420033CE87 /* basicbeep.caf */,
 				14D389E316A9B1E800371BAB /* CoreMedia.framework */,
 				14E1C22916A6192500DDAF58 /* AVFoundation.framework */,
 				14DB871A16A0EDDC00D54CDA /* Images */,
@@ -120,6 +124,8 @@
 				14DB86F316A0BEB400D54CDA /* IntervalPlayerMainViewController.xib */,
 				14DB86F616A0BEB400D54CDA /* IntervalPlayerFlipsideViewController.xib */,
 				14DB86DC16A0BEB400D54CDA /* Supporting Files */,
+				14690BA616D2F5620078B311 /* AVQueuePlayerPrevious.h */,
+				14690BA716D2F5620078B311 /* AVQueuePlayerPrevious.m */,
 			);
 			path = IntervalPlayer;
 			sourceTree = "<group>";
@@ -142,7 +148,6 @@
 			isa = PBXGroup;
 			children = (
 				14DB871B16A0EDDC00D54CDA /* NextButton.png */,
-				14DB871C16A0EDDC00D54CDA /* noArtworkImage.png */,
 				14DB871D16A0EDDC00D54CDA /* pauseButton.png */,
 				14DB871E16A0EDDC00D54CDA /* playButton.png */,
 				14DB871F16A0EDDC00D54CDA /* PreviousButton.png */,
@@ -209,10 +214,10 @@
 				14DB86F516A0BEB400D54CDA /* IntervalPlayerMainViewController.xib in Resources */,
 				14DB86F816A0BEB400D54CDA /* IntervalPlayerFlipsideViewController.xib in Resources */,
 				14DB872016A0EDDC00D54CDA /* NextButton.png in Resources */,
-				14DB872116A0EDDC00D54CDA /* noArtworkImage.png in Resources */,
 				14DB872216A0EDDC00D54CDA /* pauseButton.png in Resources */,
 				14DB872316A0EDDC00D54CDA /* playButton.png in Resources */,
 				14DB872416A0EDDC00D54CDA /* PreviousButton.png in Resources */,
+				1429266516BCEE420033CE87 /* basicbeep.caf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -227,6 +232,7 @@
 				14DB86E616A0BEB400D54CDA /* IntervalPlayerAppDelegate.m in Sources */,
 				14DB86EF16A0BEB400D54CDA /* IntervalPlayerMainViewController.m in Sources */,
 				14DB86F216A0BEB400D54CDA /* IntervalPlayerFlipsideViewController.m in Sources */,
+				14690BA816D2F5620078B311 /* AVQueuePlayerPrevious.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,7 +288,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 			};
@@ -303,7 +309,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
