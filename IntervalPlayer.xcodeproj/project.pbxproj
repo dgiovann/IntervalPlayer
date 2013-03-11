@@ -8,11 +8,28 @@
 
 /* Begin PBXBuildFile section */
 		1429266516BCEE420033CE87 /* basicbeep.caf in Resources */ = {isa = PBXBuildFile; fileRef = 1429266416BCEE420033CE87 /* basicbeep.caf */; };
+		14494E2A16EE48FA00155315 /* add_intervals_button.png in Resources */ = {isa = PBXBuildFile; fileRef = 14494E2916EE48FA00155315 /* add_intervals_button.png */; };
+		14494E2C16EE490400155315 /* clear_intervals_button.png in Resources */ = {isa = PBXBuildFile; fileRef = 14494E2B16EE490400155315 /* clear_intervals_button.png */; };
+		14494E2F16EE567300155315 /* IntervalMusicPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 14494E2E16EE567200155315 /* IntervalMusicPlayer.m */; };
+		145F09F716DE8F29000634FD /* create_playlists_button.png in Resources */ = {isa = PBXBuildFile; fileRef = 145F09F616DE8F29000634FD /* create_playlists_button.png */; };
+		145F09FA16DE9680000634FD /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14D389E316A9B1E800371BAB /* CoreMedia.framework */; };
+		145F0A0716DEA03A000634FD /* FlipsideViewSmallScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 145F0A0616DEA03A000634FD /* FlipsideViewSmallScreen.xib */; };
+		145F0A0916DEA3A0000634FD /* pause_button.png in Resources */ = {isa = PBXBuildFile; fileRef = 145F0A0816DEA3A0000634FD /* pause_button.png */; };
+		145F0A0B16DEA54B000634FD /* add_music_button.png in Resources */ = {isa = PBXBuildFile; fileRef = 145F0A0A16DEA54B000634FD /* add_music_button.png */; };
+		145F0A0D16DEA550000634FD /* clear_playlist_button.png in Resources */ = {isa = PBXBuildFile; fileRef = 145F0A0C16DEA550000634FD /* clear_playlist_button.png */; };
+		145F0A1116DEB119000634FD /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 145F0A0E16DEB119000634FD /* Default.png */; };
+		145F0A1B16DEE2DC000634FD /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 145F0A1A16DEE2DC000634FD /* Default-568h@2x.png */; };
+		145F0A1D16E030DA000634FD /* intervalIconSmall.png in Resources */ = {isa = PBXBuildFile; fileRef = 145F0A1C16E030D9000634FD /* intervalIconSmall.png */; };
+		145F0A1F16E0312C000634FD /* intervalIconSuperSmall.png in Resources */ = {isa = PBXBuildFile; fileRef = 145F0A1E16E0312B000634FD /* intervalIconSuperSmall.png */; };
+		145F0A2116E04D76000634FD /* white.png in Resources */ = {isa = PBXBuildFile; fileRef = 145F0A2016E04D75000634FD /* white.png */; };
+		145F0A2516E05057000634FD /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 145F0A2416E05057000634FD /* Default@2x.png */; };
 		14690BA816D2F5620078B311 /* AVQueuePlayerPrevious.m in Sources */ = {isa = PBXBuildFile; fileRef = 14690BA716D2F5620078B311 /* AVQueuePlayerPrevious.m */; };
-		14D389E416A9B1E800371BAB /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14D389E316A9B1E800371BAB /* CoreMedia.framework */; };
+		14690BCC16DDE5D70078B311 /* begin_button.png in Resources */ = {isa = PBXBuildFile; fileRef = 14690BC416DDE5D70078B311 /* begin_button.png */; };
+		14690BCE16DDE5D70078B311 /* play_button.png in Resources */ = {isa = PBXBuildFile; fileRef = 14690BC616DDE5D70078B311 /* play_button.png */; };
+		14690BCF16DDE5D70078B311 /* next_button.png in Resources */ = {isa = PBXBuildFile; fileRef = 14690BC716DDE5D70078B311 /* next_button.png */; };
+		14690BD216DDE5D70078B311 /* previous_button.png in Resources */ = {isa = PBXBuildFile; fileRef = 14690BCA16DDE5D70078B311 /* previous_button.png */; };
 		14DB86D616A0BEB400D54CDA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14DB86D516A0BEB400D54CDA /* UIKit.framework */; };
 		14DB86D816A0BEB400D54CDA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14DB86D716A0BEB400D54CDA /* Foundation.framework */; };
-		14DB86DA16A0BEB400D54CDA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14DB86D916A0BEB400D54CDA /* CoreGraphics.framework */; };
 		14DB86E016A0BEB400D54CDA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 14DB86DE16A0BEB400D54CDA /* InfoPlist.strings */; };
 		14DB86E216A0BEB400D54CDA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 14DB86E116A0BEB400D54CDA /* main.m */; };
 		14DB86E616A0BEB400D54CDA /* IntervalPlayerAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 14DB86E516A0BEB400D54CDA /* IntervalPlayerAppDelegate.m */; };
@@ -24,17 +41,32 @@
 		14DB86F516A0BEB400D54CDA /* IntervalPlayerMainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14DB86F316A0BEB400D54CDA /* IntervalPlayerMainViewController.xib */; };
 		14DB86F816A0BEB400D54CDA /* IntervalPlayerFlipsideViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14DB86F616A0BEB400D54CDA /* IntervalPlayerFlipsideViewController.xib */; };
 		14DB86FF16A0C35A00D54CDA /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14DB86FE16A0C35A00D54CDA /* MediaPlayer.framework */; };
-		14DB872016A0EDDC00D54CDA /* NextButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 14DB871B16A0EDDC00D54CDA /* NextButton.png */; };
-		14DB872216A0EDDC00D54CDA /* pauseButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 14DB871D16A0EDDC00D54CDA /* pauseButton.png */; };
-		14DB872316A0EDDC00D54CDA /* playButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 14DB871E16A0EDDC00D54CDA /* playButton.png */; };
-		14DB872416A0EDDC00D54CDA /* PreviousButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 14DB871F16A0EDDC00D54CDA /* PreviousButton.png */; };
 		14E1C22A16A6192500DDAF58 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14E1C22916A6192500DDAF58 /* AVFoundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1429266416BCEE420033CE87 /* basicbeep.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = basicbeep.caf; path = IntervalPlayer/basicbeep.caf; sourceTree = "<group>"; };
+		14494E2916EE48FA00155315 /* add_intervals_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = add_intervals_button.png; sourceTree = "<group>"; };
+		14494E2B16EE490400155315 /* clear_intervals_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = clear_intervals_button.png; sourceTree = "<group>"; };
+		14494E2D16EE567200155315 /* IntervalMusicPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IntervalMusicPlayer.h; sourceTree = "<group>"; };
+		14494E2E16EE567200155315 /* IntervalMusicPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IntervalMusicPlayer.m; sourceTree = "<group>"; };
+		145F09F616DE8F29000634FD /* create_playlists_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = create_playlists_button.png; sourceTree = "<group>"; };
+		145F0A0616DEA03A000634FD /* FlipsideViewSmallScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FlipsideViewSmallScreen.xib; sourceTree = "<group>"; };
+		145F0A0816DEA3A0000634FD /* pause_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pause_button.png; sourceTree = "<group>"; };
+		145F0A0A16DEA54B000634FD /* add_music_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = add_music_button.png; sourceTree = "<group>"; };
+		145F0A0C16DEA550000634FD /* clear_playlist_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = clear_playlist_button.png; sourceTree = "<group>"; };
+		145F0A0E16DEB119000634FD /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		145F0A1A16DEE2DC000634FD /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		145F0A1C16E030D9000634FD /* intervalIconSmall.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = intervalIconSmall.png; sourceTree = "<group>"; };
+		145F0A1E16E0312B000634FD /* intervalIconSuperSmall.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = intervalIconSuperSmall.png; sourceTree = "<group>"; };
+		145F0A2016E04D75000634FD /* white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = white.png; sourceTree = "<group>"; };
+		145F0A2416E05057000634FD /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		14690BA616D2F5620078B311 /* AVQueuePlayerPrevious.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVQueuePlayerPrevious.h; sourceTree = "<group>"; };
 		14690BA716D2F5620078B311 /* AVQueuePlayerPrevious.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVQueuePlayerPrevious.m; sourceTree = "<group>"; };
+		14690BC416DDE5D70078B311 /* begin_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = begin_button.png; sourceTree = "<group>"; };
+		14690BC616DDE5D70078B311 /* play_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = play_button.png; sourceTree = "<group>"; };
+		14690BC716DDE5D70078B311 /* next_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = next_button.png; sourceTree = "<group>"; };
+		14690BCA16DDE5D70078B311 /* previous_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = previous_button.png; sourceTree = "<group>"; };
 		14D389E316A9B1E800371BAB /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 		14DB86D116A0BEB400D54CDA /* IntervalPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IntervalPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		14DB86D516A0BEB400D54CDA /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -56,10 +88,6 @@
 		14DB86F416A0BEB400D54CDA /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/IntervalPlayerMainViewController.xib; sourceTree = "<group>"; };
 		14DB86F716A0BEB400D54CDA /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/IntervalPlayerFlipsideViewController.xib; sourceTree = "<group>"; };
 		14DB86FE16A0C35A00D54CDA /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
-		14DB871B16A0EDDC00D54CDA /* NextButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NextButton.png; sourceTree = "<group>"; };
-		14DB871D16A0EDDC00D54CDA /* pauseButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pauseButton.png; sourceTree = "<group>"; };
-		14DB871E16A0EDDC00D54CDA /* playButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = playButton.png; sourceTree = "<group>"; };
-		14DB871F16A0EDDC00D54CDA /* PreviousButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PreviousButton.png; sourceTree = "<group>"; };
 		14E1C22916A6192500DDAF58 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -68,12 +96,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				14D389E416A9B1E800371BAB /* CoreMedia.framework in Frameworks */,
+				145F09FA16DE9680000634FD /* CoreMedia.framework in Frameworks */,
 				14E1C22A16A6192500DDAF58 /* AVFoundation.framework in Frameworks */,
 				14DB86FF16A0C35A00D54CDA /* MediaPlayer.framework in Frameworks */,
 				14DB86D616A0BEB400D54CDA /* UIKit.framework in Frameworks */,
 				14DB86D816A0BEB400D54CDA /* Foundation.framework in Frameworks */,
-				14DB86DA16A0BEB400D54CDA /* CoreGraphics.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +110,8 @@
 		14DB86C616A0BEB400D54CDA = {
 			isa = PBXGroup;
 			children = (
+				145F0A1E16E0312B000634FD /* intervalIconSuperSmall.png */,
+				145F0A1C16E030D9000634FD /* intervalIconSmall.png */,
 				1429266416BCEE420033CE87 /* basicbeep.caf */,
 				14D389E316A9B1E800371BAB /* CoreMedia.framework */,
 				14E1C22916A6192500DDAF58 /* AVFoundation.framework */,
@@ -117,12 +146,15 @@
 			children = (
 				14DB86E416A0BEB400D54CDA /* IntervalPlayerAppDelegate.h */,
 				14DB86E516A0BEB400D54CDA /* IntervalPlayerAppDelegate.m */,
+				14494E2D16EE567200155315 /* IntervalMusicPlayer.h */,
+				14494E2E16EE567200155315 /* IntervalMusicPlayer.m */,
 				14DB86ED16A0BEB400D54CDA /* IntervalPlayerMainViewController.h */,
 				14DB86EE16A0BEB400D54CDA /* IntervalPlayerMainViewController.m */,
 				14DB86F016A0BEB400D54CDA /* IntervalPlayerFlipsideViewController.h */,
 				14DB86F116A0BEB400D54CDA /* IntervalPlayerFlipsideViewController.m */,
 				14DB86F316A0BEB400D54CDA /* IntervalPlayerMainViewController.xib */,
 				14DB86F616A0BEB400D54CDA /* IntervalPlayerFlipsideViewController.xib */,
+				145F0A0616DEA03A000634FD /* FlipsideViewSmallScreen.xib */,
 				14DB86DC16A0BEB400D54CDA /* Supporting Files */,
 				14690BA616D2F5620078B311 /* AVQueuePlayerPrevious.h */,
 				14690BA716D2F5620078B311 /* AVQueuePlayerPrevious.m */,
@@ -147,10 +179,20 @@
 		14DB871A16A0EDDC00D54CDA /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				14DB871B16A0EDDC00D54CDA /* NextButton.png */,
-				14DB871D16A0EDDC00D54CDA /* pauseButton.png */,
-				14DB871E16A0EDDC00D54CDA /* playButton.png */,
-				14DB871F16A0EDDC00D54CDA /* PreviousButton.png */,
+				145F0A2016E04D75000634FD /* white.png */,
+				145F0A2416E05057000634FD /* Default@2x.png */,
+				145F0A0E16DEB119000634FD /* Default.png */,
+				14494E2B16EE490400155315 /* clear_intervals_button.png */,
+				14494E2916EE48FA00155315 /* add_intervals_button.png */,
+				145F0A1A16DEE2DC000634FD /* Default-568h@2x.png */,
+				145F0A0C16DEA550000634FD /* clear_playlist_button.png */,
+				145F0A0A16DEA54B000634FD /* add_music_button.png */,
+				145F0A0816DEA3A0000634FD /* pause_button.png */,
+				145F09F616DE8F29000634FD /* create_playlists_button.png */,
+				14690BC416DDE5D70078B311 /* begin_button.png */,
+				14690BC616DDE5D70078B311 /* play_button.png */,
+				14690BC716DDE5D70078B311 /* next_button.png */,
+				14690BCA16DDE5D70078B311 /* previous_button.png */,
 			);
 			path = Images;
 			sourceTree = "<group>";
@@ -213,11 +255,24 @@
 				14DB86EC16A0BEB400D54CDA /* Default-568h@2x.png in Resources */,
 				14DB86F516A0BEB400D54CDA /* IntervalPlayerMainViewController.xib in Resources */,
 				14DB86F816A0BEB400D54CDA /* IntervalPlayerFlipsideViewController.xib in Resources */,
-				14DB872016A0EDDC00D54CDA /* NextButton.png in Resources */,
-				14DB872216A0EDDC00D54CDA /* pauseButton.png in Resources */,
-				14DB872316A0EDDC00D54CDA /* playButton.png in Resources */,
-				14DB872416A0EDDC00D54CDA /* PreviousButton.png in Resources */,
 				1429266516BCEE420033CE87 /* basicbeep.caf in Resources */,
+				14690BCC16DDE5D70078B311 /* begin_button.png in Resources */,
+				14690BCE16DDE5D70078B311 /* play_button.png in Resources */,
+				14690BCF16DDE5D70078B311 /* next_button.png in Resources */,
+				14690BD216DDE5D70078B311 /* previous_button.png in Resources */,
+				145F09F716DE8F29000634FD /* create_playlists_button.png in Resources */,
+				145F0A0716DEA03A000634FD /* FlipsideViewSmallScreen.xib in Resources */,
+				145F0A0916DEA3A0000634FD /* pause_button.png in Resources */,
+				145F0A0B16DEA54B000634FD /* add_music_button.png in Resources */,
+				145F0A0D16DEA550000634FD /* clear_playlist_button.png in Resources */,
+				145F0A1116DEB119000634FD /* Default.png in Resources */,
+				145F0A1B16DEE2DC000634FD /* Default-568h@2x.png in Resources */,
+				145F0A1D16E030DA000634FD /* intervalIconSmall.png in Resources */,
+				145F0A1F16E0312C000634FD /* intervalIconSuperSmall.png in Resources */,
+				145F0A2116E04D76000634FD /* white.png in Resources */,
+				145F0A2516E05057000634FD /* Default@2x.png in Resources */,
+				14494E2A16EE48FA00155315 /* add_intervals_button.png in Resources */,
+				14494E2C16EE490400155315 /* clear_intervals_button.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -233,6 +288,7 @@
 				14DB86EF16A0BEB400D54CDA /* IntervalPlayerMainViewController.m in Sources */,
 				14DB86F216A0BEB400D54CDA /* IntervalPlayerFlipsideViewController.m in Sources */,
 				14690BA816D2F5620078B311 /* AVQueuePlayerPrevious.m in Sources */,
+				14494E2F16EE567300155315 /* IntervalMusicPlayer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,7 +331,8 @@
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Daniel Giovannelli";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Daniel Giovannelli";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -288,8 +345,10 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "2F493D35-B2D3-4669-8FDF-64FD7C3E031B";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "2F493D35-B2D3-4669-8FDF-64FD7C3E031B";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -303,14 +362,17 @@
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Daniel Giovannelli";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Daniel Giovannelli";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PROVISIONING_PROFILE = "2F493D35-B2D3-4669-8FDF-64FD7C3E031B";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "2F493D35-B2D3-4669-8FDF-64FD7C3E031B";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -319,10 +381,15 @@
 		14DB86FC16A0BEB400D54CDA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer: Daniel Giovannelli (73URDRC3DC)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Daniel Giovannelli (73URDRC3DC)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "IntervalPlayer/IntervalPlayer-Prefix.pch";
 				INFOPLIST_FILE = "IntervalPlayer/IntervalPlayer-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "0E9F7F19-2370-4142-9E64-A698BCED0448";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "0E9F7F19-2370-4142-9E64-A698BCED0448";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -330,10 +397,15 @@
 		14DB86FD16A0BEB400D54CDA /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer: Daniel Giovannelli (73URDRC3DC)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Daniel Giovannelli (73URDRC3DC)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "IntervalPlayer/IntervalPlayer-Prefix.pch";
 				INFOPLIST_FILE = "IntervalPlayer/IntervalPlayer-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "0E9F7F19-2370-4142-9E64-A698BCED0448";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "0E9F7F19-2370-4142-9E64-A698BCED0448";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

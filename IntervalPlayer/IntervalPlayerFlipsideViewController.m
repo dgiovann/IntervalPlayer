@@ -21,8 +21,22 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    intervalOne = [[NSMutableArray alloc] init];
-    intervalTwo = [[NSMutableArray alloc] init];
+    if(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)
+    {
+        CGSize result = [[UIScreen mainScreen] bounds].size;
+        if(result.height == 480)
+        {
+            // iPhone Classic
+            [[NSBundle mainBundle] loadNibNamed:@"FlipsideViewSmallScreen" owner:self options:nil];
+        }
+        if(result.height == 568)
+        {
+            // iPhone 5
+            [[NSBundle mainBundle] loadNibNamed:@"IntervalPlayerFlipsideViewController" owner:self options:nil];
+        }
+    }
+    [songListView1 reloadData];
+    [songListView2 reloadData];
 }
 
 - (void)didReceiveMemoryWarning
@@ -65,14 +79,17 @@
         if (playlistToAssignTo == 1) {
             for (int i=0; i < [[mediaItemCollection items] count]; i++) {
                 MPMediaItem *item = [[mediaItemCollection items] objectAtIndex:i];
-                //[intervalOne addObject:[item valueForProperty:MPMediaItemPropertyAssetURL]];
-                [intervalOne addObject:item];
+                if ([AVPlayerItem playerItemWithURL:[item valueForProperty:MPMediaItemPropertyAssetURL]]) {
+                    [intervalOne addObject:item];
+                }
             }
        } else if (playlistToAssignTo == 2) {
             for (int i=0; i < [[mediaItemCollection items] count]; i++) {
                 MPMediaItem *item = [[mediaItemCollection items] objectAtIndex:i];
-                [intervalTwo addObject:item];
+                if ([AVPlayerItem playerItemWithURL:[item valueForProperty:MPMediaItemPropertyAssetURL]]) {
+                    [intervalTwo addObject:item];
                 }
+            }
         }
     }
     [songListView1 reloadData];
@@ -87,17 +104,15 @@
 
 -(IBAction)clearPlaylistOne:(id)sender
 {
-    // WIPE INTERVALONE
-    // BLANK UISCROLLVIEW
+    [intervalOne removeAllObjects];
+    [songListView1 reloadData];
 }
 -(IBAction)clearPlaylistTwo:(id)sender
 {
-    // WIPE INTERVALTWO
-    // BLANK UISCROLLVIEW
+    [intervalTwo removeAllObjects];
+    [songListView2 reloadData];
 }
 - (void)viewDidUnload {
-    [self setSongListView1:nil];
-    [self setSongListView2:nil];
     [super viewDidUnload];
 }
 
@@ -125,7 +140,7 @@
     if (tableView == self.songListView1) {
         contentForThisRow = [[intervalOne objectAtIndex:[indexPath row]] valueForProperty:MPMediaItemPropertyTitle];
     } else {
-        contentForThisRow = [[intervalTwo objectAtIndex:[indexPath row]] valueForProperty:MPMediaItemPropertyTitle];
+        contentForThisRow = [[intervalTwo objectAtIndex:[indexPath row]] valueForProperty:  MPMediaItemPropertyTitle];
     }
     [[cell textLabel] setText:contentForThisRow];
     return cell;

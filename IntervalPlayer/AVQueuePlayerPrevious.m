@@ -21,6 +21,13 @@
     if (self){
         self.itemsForPlayer = [NSMutableArray arrayWithArray:items];
         nowPlayingIndex = 0;
+        isCalledFromPlayPreviousItem = NO;
+        for (int songPointer = 0; songPointer < [items count]; songPointer++) {
+        [[NSNotificationCenter defaultCenter] addObserver:self
+                                                 selector:@selector(songEnded:)
+                                                     name:AVPlayerItemDidPlayToEndTimeNotification
+                                                   object:[items objectAtIndex:songPointer]];
+        }
     }
     return self;
 }
@@ -37,6 +44,14 @@
 
 // NEW METHODS
 
+-(void)songEnded:(NSNotification *)notification {
+    // This method is called by NSNotificationCenter when a song finishes playing; all it does is increment
+    // nowPlayingIndex
+    if (nowPlayingIndex < [_itemsForPlayer count] - 1){
+        nowPlayingIndex++;
+    }
+}
+
 -(void)playPreviousItem
 {
     // This function is the meat of this library: it allows for going backwards in an AVQueuePlayer,
@@ -48,11 +63,15 @@
         [self pause];
         // Note: it is necessary to have seekToTime called twice in this method, once before and once after re-making the area. If it is not present before, the player will resume from the same spot in the next song when the previous song finishes playing; if it is not present after, the previous song will be played from the same spot that the current song was on.
         [self seekToTime:kCMTimeZero toleranceBefore:kCMTimeZero toleranceAfter:kCMTimeZero];
+        // The next two lines are necessary since RemoveAllItems resets both the nowPlayingIndex and _itemsForPlayer
         int tempNowPlayingIndex = nowPlayingIndex;
+        NSMutableArray *tempPlaylist = [[NSMutableArray alloc]initWithArray:_itemsForPlayer];
         [self removeAllItems];
-        for (int i=nowPlayingIndex - 1; i < [_itemsForPlayer count]; i++) {
-            [self insertItem:[_itemsForPlayer objectAtIndex:i] afterItem:nil];
+        isCalledFromPlayPreviousItem = YES;
+        for (int i = tempNowPlayingIndex - 1; i < [tempPlaylist count]; i++) {
+            [self insertItem:[tempPlaylist objectAtIndex:i] afterItem:nil];
         }
+        isCalledFromPlayPreviousItem = NO;
         // The temp index is necessary since removeAllItems resets the nowPlayingIndex
         nowPlayingIndex = tempNowPlayingIndex - 1;
         // Not a typo; see above comment
@@ -81,6 +100,7 @@
     // nowPlayingIndex to 0.
     [super removeAllItems];
     nowPlayingIndex = 0;
+    [_itemsForPlayer removeAllObjects];
 }
 
 -(void)removeItem:(AVPlayerItem *)item
@@ -105,19 +125,36 @@
 {
     // The only addition this method makes to AVQueuePlayer is advancing the nowPlayingIndex by 1.
     [super advanceToNextItem];
-    nowPlayingIndex++;
+    if (nowPlayingIndex < [_itemsForPlayer count] - 1){
+        nowPlayingIndex++;
+    }
 }
-
 -(void)insertItem:(AVPlayerItem *)item afterItem:(AVPlayerItem *)afterItem
 {
     // This method calls the superclass to add the new item to the AVQueuePlayer, then adds that item to the
     // proper location in the itemsForPlayer array and increments the nowPlayingIndex if necessary.
     [super insertItem:item afterItem:afterItem];
-    if ([_itemsForPlayer indexOfObject:item] < nowPlayingIndex)
-    {
-        nowPlayingIndex++;
+    if (!isCalledFromPlayPreviousItem){
+        if ([_itemsForPlayer indexOfObject:item] < nowPlayingIndex)
+        {
+            nowPlayingIndex++;
+        }
     }
-    [_itemsForPlayer insertObject:afterItem atIndex:[_itemsForPlayer indexOfObject:item]];
+    if ([_itemsForPlayer containsObject:afterItem]){ // AfterItem is non-nil
+        if ([_itemsForPlayer indexOfObject:afterItem] < [_itemsForPlayer count] - 1){
+            [_itemsForPlayer insertObject:item atIndex:[_itemsForPlayer indexOfObject:afterItem] + 1];
+        } else {
+            [_itemsForPlayer addObject:item];
+        }
+    } else { // afterItem is nil
+        [_itemsForPlayer addObject:item];
+    }
+}
+
+-(int)getIndex
+{
+    // This method simple returns the now playing index
+    return nowPlayingIndex;
 }
 
 @end
