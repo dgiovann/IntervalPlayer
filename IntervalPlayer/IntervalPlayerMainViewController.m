@@ -180,7 +180,7 @@
 -(IBAction)addInterval:(id)sender
 {
     [intervalAlert show];
-    // Pop-up a box, have the user input a number, set newInterval to that number.
+    
 }
 
 -(void)alertView:(UIAlertView*) alertView clickedButtonAtIndex:(NSInteger)buttonIndex

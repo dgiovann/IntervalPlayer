@@ -26,12 +26,12 @@
         CGSize result = [[UIScreen mainScreen] bounds].size;
         if(result.height == 480)
         {
-            // iPhone Classic
+            // This loads the smaller nib for older iPhone models. Unlike MainViewController, this nib does not auto resize well, so we use two different custom ones instead
             [[NSBundle mainBundle] loadNibNamed:@"FlipsideViewSmallScreen" owner:self options:nil];
         }
         if(result.height == 568)
         {
-            // iPhone 5
+            // larger nib for iPhone 5
             [[NSBundle mainBundle] loadNibNamed:@"IntervalPlayerFlipsideViewController" owner:self options:nil];
         }
     }
@@ -79,6 +79,7 @@
         if (playlistToAssignTo == 1) {
             for (int i=0; i < [[mediaItemCollection items] count]; i++) {
                 MPMediaItem *item = [[mediaItemCollection items] objectAtIndex:i];
+                // This if statement ensures that the URL is valid before adding it to the array. This catches a specific corner case - music files bought from the iTunes store before 2009, which are encoded with iTunes's old DRM scheme, are not recognized as valid media items by AVPlayer and will crash the app if they are played. This prevents such items from ever being added to the playlist
                 if ([AVPlayerItem playerItemWithURL:[item valueForProperty:MPMediaItemPropertyAssetURL]]) {
                     [intervalOne addObject:item];
                 }
@@ -86,11 +87,14 @@
        } else if (playlistToAssignTo == 2) {
             for (int i=0; i < [[mediaItemCollection items] count]; i++) {
                 MPMediaItem *item = [[mediaItemCollection items] objectAtIndex:i];
+                // See above comment
                 if ([AVPlayerItem playerItemWithURL:[item valueForProperty:MPMediaItemPropertyAssetURL]]) {
                     [intervalTwo addObject:item];
                 }
             }
-        }
+       } else {
+           NSLog(@"Error in mediaPicker");
+       }
     }
     [songListView1 reloadData];
     [songListView2 reloadData];

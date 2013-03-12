@@ -44,6 +44,7 @@
     UIAlertView *clearAlert;
     UIAlertView *intervalAlert;
     
+    // The text boxes used to determine the total play time
     IBOutlet UITextField *playForSeconds;
     IBOutlet UITextField *playForMinutes;
 }

@@ -2,7 +2,7 @@
 //  IntervalMusicPlayer.m
 //  IntervalPlayer
 //
-//  Created by Alicia Harder on 3/11/13.
+//  Created by Daniel Giovannelli.
 //  Copyright (c) 2013 IntervalPlayer. All rights reserved.
 //
 
@@ -376,7 +376,7 @@
 }
 
 - (void)remoteControlReceivedWithEvent:(UIEvent *)event {
-    //if it is a remote control event handle it correctly
+    // Handle commands coming in from the lock screen
     if (event.type == UIEventTypeRemoteControl) {
         if (event.subtype == UIEventSubtypeRemoteControlPlay) {
             [self playPause];
