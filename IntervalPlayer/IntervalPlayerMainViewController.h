@@ -7,73 +7,51 @@
 //
 
 #import "IntervalPlayerFlipsideViewController.h"
-#import "AVQueuePlayerPrevious.h"
+#import "IntervalMusicPlayer.h"
+
 
 @interface IntervalPlayerMainViewController : UIViewController <IntervalPlayerFlipsideViewControllerDelegate, MPMediaPickerControllerDelegate, UITextFieldDelegate, AVAudioPlayerDelegate>
 {
     // Variables are grouped alphabetically by type
     
-    // A basic AVAudioPlayer used to play the beep heard when an interval switches
-    AVAudioPlayer *beepPlayer;
-
     // A reference to the currently playing item. This is used to populate the song info labels
     AVPlayerItem *currentItem;
 
-    // Used to determine if the player is playing or not; some methods react differently in each case
-    Boolean intervalRunning;
-    // Used to keep track of whether PlayPause is being called for the first time (if it is, it needs to behave slightly differently)
-    Boolean justStarted;
-    // There is a particular edge case (if a certain timer fires at a particular moment) in which beeping can continue even after the intervals have stopped; this flag prevents this
-    Boolean stopBeeping;
-
+    
     // IBOutlets for each UI element that will be changed (text or button images)
+
+
+    __weak IBOutlet UIButton *playOrPauseButton;
+    
     IBOutlet UILabel *albumLabel;
     IBOutlet UILabel *artistLabel;
     IBOutlet UILabel *intervalTimesLabel;
-    IBOutlet UIButton *nextButton;
-    IBOutlet UIButton *playPauseButton;
-    IBOutlet UIButton *previousButton;
     IBOutlet UILabel *titleLabel;
 
+    // A pointer to the musicPlayer object which controls playing all music
+    IntervalMusicPlayer *musicPlayer;
+    
+    // A temporary array which is used to populate the song information labels
+    
     NSArray *metadataList;
 
-    NSDate *timeTimerStarted;
-
-    NSInteger currentIntervalIndex;
-    NSInteger switchAfter;
-    NSInteger totalRunTime;
-
-    NSMutableArray *intervalOneFromFlipside;
-    NSMutableArray *intervalTwoFromFlipside;
-    NSMutableArray *itemsForInterval1;
-    NSMutableArray *itemsForInterval2;
-    NSMutableArray *timesForIntervals;
-
-    NSNumber *currentInterval;
-    NSNumber *totalSecondToPlayFor;
-    
+    // Strings to hold the song's metadata
     NSString *album;
     NSString *artist;
     NSString *title;
-    
-    NSTimeInterval timeSinceStart;
-    
-    NSTimer *intervalTimer;
-    NSTimer *totalRunTimer;
-    
+
+    // This app uses two alerts, one to confirm clearing the intervals and one if you try to start the playlists without creating any playlists
     UIAlertView *clearAlert;
     UIAlertView *intervalAlert;
     
+    IBOutlet UITextField *playForSeconds;
+    IBOutlet UITextField *playForMinutes;
 }
 
-@property (nonatomic, strong) AVQueuePlayerPrevious *interval1;
-@property (nonatomic, strong) AVQueuePlayerPrevious *interval2;
-@property (weak, nonatomic) IBOutlet UITextField *playForSeconds;
-@property (weak, nonatomic) IBOutlet UITextField *playForMinutes;
+// Properties for any object called from another class, which in this case is only the UI switch
 @property (weak, nonatomic) IBOutlet UISwitch *toneSwitch;
 
-
-
+// Methods for each button. Most of them only call methods on IntervalMusicPlayer.
 -(IBAction)addInterval:(id)sender;
 -(IBAction)clearIntervals:(id)sender;
 -(IBAction)showInfo:(id)sender;
@@ -81,12 +59,11 @@
 -(IBAction)nextSong:(id)sender;
 -(IBAction)beginOrPlayPause:(id)sender;
 
--(void)switchInterval;
--(void)setIntervalsWithIntervalOne:(NSMutableArray *)interval1 IntervalTwo:(NSMutableArray *)interval2;
--(void)endPlaying;
+// This method sets the song info labels which display in the view controllers to whatever is currently playing on the IntervalMusicPlayer player at playerNumber. This is a bit more tightly-coupled then I would like; I plan to fix this if/when I refactor the app.
 -(void)setSongInfoForPlayer:(NSNumber *)playerNumber atEnd:(Boolean)atEnd;
--(void)resumeIntervalTimer;
--(void)songFinished:(NSNotification *)notification;
--(void)playPause;
+// This method changes the image of the play/pause button: 0 is begin, 1 is play, and 2 is pause
+-(void)setPlayPauseButton:(NSInteger)setTo;
+// This method clears the song info labels, replacing them with "Title" "Artist" and "Album"
+-(void)clearSongInfo;
 
 @end

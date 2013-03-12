@@ -8,26 +8,13 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "IntervalPlayer/IntervalPlayerMainViewController.h"
-         timestampString = "383710381.099529"
+         timestampString = "384723330.587978"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "12"
-         endingLineNumber = "12"
+         startingLineNumber = "13"
+         endingLineNumber = "13"
          landmarkName = "@interface IntervalPlayerMainViewController"
          landmarkType = "2">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "No"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         filePath = "IntervalPlayer/IntervalPlayerMainViewController.m"
-         timestampString = "384547046.010516"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "286"
-         endingLineNumber = "286"
-         landmarkName = "-playPause"
-         landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
          shouldBeEnabled = "No"
@@ -99,11 +86,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "IntervalPlayer/IntervalPlayerMainViewController.m"
-         timestampString = "384547046.010516"
+         timestampString = "384757879.364809"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "439"
-         endingLineNumber = "439"
+         startingLineNumber = "102"
+         endingLineNumber = "102"
          landmarkName = "-setSongInfoForPlayer:atEnd:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -112,11 +99,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "IntervalPlayer/IntervalPlayerMainViewController.m"
-         timestampString = "384547046.010516"
+         timestampString = "384757879.364809"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "440"
-         endingLineNumber = "440"
+         startingLineNumber = "103"
+         endingLineNumber = "103"
          landmarkName = "-setSongInfoForPlayer:atEnd:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -125,11 +112,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "IntervalPlayer/IntervalPlayerMainViewController.m"
-         timestampString = "384547046.010516"
+         timestampString = "384725549.16459"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "442"
-         endingLineNumber = "442"
+         startingLineNumber = "107"
+         endingLineNumber = "107"
          landmarkName = "-setSongInfoForPlayer:atEnd:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -138,26 +125,74 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "IntervalPlayer/IntervalPlayerMainViewController.m"
-         timestampString = "384547046.010516"
+         timestampString = "384757879.364809"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "190"
-         endingLineNumber = "190"
-         landmarkName = "-switchInterval"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "No"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         filePath = "IntervalPlayer/IntervalPlayerMainViewController.m"
-         timestampString = "384547046.010516"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "541"
-         endingLineNumber = "541"
+         startingLineNumber = "204"
+         endingLineNumber = "204"
          landmarkName = "-alertView:clickedButtonAtIndex:"
          landmarkType = "5">
       </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "IntervalPlayer/IntervalMusicPlayer.h"
+         timestampString = "384752637.048259"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "63"
+         endingLineNumber = "63"
+         landmarkName = "-initForViewController:"
+         landmarkType = "4">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "IntervalPlayer/IntervalMusicPlayer.h"
+         timestampString = "384752637.048259"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "48"
+         endingLineNumber = "48"
+         landmarkName = "@interface IntervalMusicPlayer"
+         landmarkType = "2">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "IntervalPlayer/IntervalPlayerMainViewController.m"
+         timestampString = "384757879.364809"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "221"
+         endingLineNumber = "221"
+         landmarkName = "-setPlayPauseButton:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "IntervalPlayer/IntervalPlayerMainViewController.m"
+         timestampString = "384722235.466705"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "15"
+         endingLineNumber = "15"
+         landmarkName = "@implementation IntervalPlayerMainViewController"
+         landmarkType = "3">
+      </FileBreakpoint>
    </FileBreakpoints>
+   <ExceptionBreakpoints>
+      <ExceptionBreakpoint
+         shouldBeEnabled = "Yes"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         scope = "0"
+         stopOnStyle = "0">
+      </ExceptionBreakpoint>
+   </ExceptionBreakpoints>
 </Bucket>
