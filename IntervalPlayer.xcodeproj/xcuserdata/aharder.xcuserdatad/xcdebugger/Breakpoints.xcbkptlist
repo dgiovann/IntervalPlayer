@@ -138,11 +138,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "IntervalPlayer/IntervalMusicPlayer.h"
-         timestampString = "384752637.048259"
+         timestampString = "384816888.055752"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "48"
-         endingLineNumber = "48"
+         startingLineNumber = "58"
+         endingLineNumber = "58"
          landmarkName = "@interface IntervalMusicPlayer"
          landmarkType = "2">
       </FileBreakpoint>
