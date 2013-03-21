@@ -43,6 +43,9 @@
         if (!itemsForInterval2){
             itemsForInterval2 = [[NSMutableArray alloc] init];
         }
+        oldItemsForInterval1 = [[NSMutableArray alloc] init];
+        oldItemsForInterval2 = [[NSMutableArray alloc] init];
+ 
         NSURL *soundURL = [[NSBundle mainBundle] URLForResource:@"basicbeep"
                                                   withExtension:@"caf"];
         [[NSNotificationCenter defaultCenter] addObserver:self
@@ -61,11 +64,11 @@
     return self;
 }
 
-#pragma mark - Flipside View
-
 - (void)setIntervalsWithIntervalOne:(NSMutableArray *)firstinterval IntervalTwo:(NSMutableArray *)secondinterval
 {
     intervalRunning = false;
+    oldItemsForInterval1 = [firstinterval copyWithZone:nil];
+    oldItemsForInterval2 = [secondinterval copyWithZone:nil];
     [itemsForInterval1 removeAllObjects];
     [itemsForInterval2 removeAllObjects];
     if (_interval1) {
@@ -371,6 +374,7 @@
     [mainController clearSongInfo];
     [_interval1 removeAllItems];
     [_interval2 removeAllItems];
+    [self setIntervalsWithIntervalOne:oldItemsForInterval1 IntervalTwo:oldItemsForInterval2];
     intervalRunning = false;
     stopBeeping = true;
 }

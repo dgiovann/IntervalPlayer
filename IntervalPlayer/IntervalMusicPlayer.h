@@ -37,6 +37,8 @@
     NSInteger totalRunTime;
     
     // These arrays keep track of the items for the playlists. Specifically, they contain MPMediaItems generated from the URLs passed in by the flipside view controller
+    NSMutableArray *oldItemsForInterval1;
+    NSMutableArray *oldItemsForInterval2;
     NSMutableArray *itemsForInterval1;
     NSMutableArray *itemsForInterval2;
     // This array contains the times for the intervals. It is looped over to determine how often the playlists should switch

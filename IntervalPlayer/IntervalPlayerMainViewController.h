@@ -47,6 +47,7 @@
     // The text boxes used to determine the total play time
     IBOutlet UITextField *playForSeconds;
     IBOutlet UITextField *playForMinutes;
+    UITextField *newIntervalLengthTextField;
 }
 
 // Properties for any object called from another class, which in this case is only the UI switch

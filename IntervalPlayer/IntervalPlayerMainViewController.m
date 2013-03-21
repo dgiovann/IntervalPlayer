@@ -27,7 +27,8 @@
         clearAlert = [[UIAlertView alloc] initWithTitle:@"Clear Interval?" message:@"Are you sure that you want to clear the set intervals? This operation cannot be undone." delegate:self cancelButtonTitle:@"Do Not Clear" otherButtonTitles:@"Clear", nil];
         clearAlert.alertViewStyle = UIAlertViewStyleDefault;
         intervalAlert.alertViewStyle = UIAlertViewStylePlainTextInput;
-         
+        newIntervalLengthTextField = [intervalAlert textFieldAtIndex:0];
+        newIntervalLengthTextField.keyboardType = UIKeyboardTypeNumberPad;
     }
     return self;
  }
@@ -187,7 +188,6 @@
 {
     if ([alertView isEqual:intervalAlert]) {
         if (buttonIndex == 1) {
-            UITextField *newIntervalLengthTextField = [intervalAlert textFieldAtIndex:0];
             NSNumber *newInterval = [[NSNumber alloc] initWithInt:[[newIntervalLengthTextField text] intValue]];
             [musicPlayer addInterval:newInterval];
             if ([[intervalTimesLabel text] isEqualToString:@"No Interval Times Set"]){
@@ -233,4 +233,5 @@
     playOrPauseButton = nil;
     [super viewDidUnload];
 }
+
 @end

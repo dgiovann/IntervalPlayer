@@ -11,6 +11,8 @@
 		14494E2A16EE48FA00155315 /* add_intervals_button.png in Resources */ = {isa = PBXBuildFile; fileRef = 14494E2916EE48FA00155315 /* add_intervals_button.png */; };
 		14494E2C16EE490400155315 /* clear_intervals_button.png in Resources */ = {isa = PBXBuildFile; fileRef = 14494E2B16EE490400155315 /* clear_intervals_button.png */; };
 		14494E2F16EE567300155315 /* IntervalMusicPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 14494E2E16EE567200155315 /* IntervalMusicPlayer.m */; };
+		14494E3116F161AA00155315 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 14494E3016F161A900155315 /* Default.png */; };
+		14494E3316F161C800155315 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 14494E3216F161C800155315 /* Default-568h@2x.png */; };
 		145F09F716DE8F29000634FD /* create_playlists_button.png in Resources */ = {isa = PBXBuildFile; fileRef = 145F09F616DE8F29000634FD /* create_playlists_button.png */; };
 		145F09FA16DE9680000634FD /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14D389E316A9B1E800371BAB /* CoreMedia.framework */; };
 		145F0A0716DEA03A000634FD /* FlipsideViewSmallScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 145F0A0616DEA03A000634FD /* FlipsideViewSmallScreen.xib */; };
@@ -22,7 +24,6 @@
 		145F0A1D16E030DA000634FD /* intervalIconSmall.png in Resources */ = {isa = PBXBuildFile; fileRef = 145F0A1C16E030D9000634FD /* intervalIconSmall.png */; };
 		145F0A1F16E0312C000634FD /* intervalIconSuperSmall.png in Resources */ = {isa = PBXBuildFile; fileRef = 145F0A1E16E0312B000634FD /* intervalIconSuperSmall.png */; };
 		145F0A2116E04D76000634FD /* white.png in Resources */ = {isa = PBXBuildFile; fileRef = 145F0A2016E04D75000634FD /* white.png */; };
-		145F0A2516E05057000634FD /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 145F0A2416E05057000634FD /* Default@2x.png */; };
 		14690BA816D2F5620078B311 /* AVQueuePlayerPrevious.m in Sources */ = {isa = PBXBuildFile; fileRef = 14690BA716D2F5620078B311 /* AVQueuePlayerPrevious.m */; };
 		14690BCC16DDE5D70078B311 /* begin_button.png in Resources */ = {isa = PBXBuildFile; fileRef = 14690BC416DDE5D70078B311 /* begin_button.png */; };
 		14690BCE16DDE5D70078B311 /* play_button.png in Resources */ = {isa = PBXBuildFile; fileRef = 14690BC616DDE5D70078B311 /* play_button.png */; };
@@ -50,6 +51,8 @@
 		14494E2B16EE490400155315 /* clear_intervals_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = clear_intervals_button.png; sourceTree = "<group>"; };
 		14494E2D16EE567200155315 /* IntervalMusicPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IntervalMusicPlayer.h; sourceTree = "<group>"; };
 		14494E2E16EE567200155315 /* IntervalMusicPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IntervalMusicPlayer.m; sourceTree = "<group>"; };
+		14494E3016F161A900155315 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		14494E3216F161C800155315 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		145F09F616DE8F29000634FD /* create_playlists_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = create_playlists_button.png; sourceTree = "<group>"; };
 		145F0A0616DEA03A000634FD /* FlipsideViewSmallScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FlipsideViewSmallScreen.xib; sourceTree = "<group>"; };
 		145F0A0816DEA3A0000634FD /* pause_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pause_button.png; sourceTree = "<group>"; };
@@ -60,7 +63,6 @@
 		145F0A1C16E030D9000634FD /* intervalIconSmall.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = intervalIconSmall.png; sourceTree = "<group>"; };
 		145F0A1E16E0312B000634FD /* intervalIconSuperSmall.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = intervalIconSuperSmall.png; sourceTree = "<group>"; };
 		145F0A2016E04D75000634FD /* white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = white.png; sourceTree = "<group>"; };
-		145F0A2416E05057000634FD /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		14690BA616D2F5620078B311 /* AVQueuePlayerPrevious.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVQueuePlayerPrevious.h; sourceTree = "<group>"; };
 		14690BA716D2F5620078B311 /* AVQueuePlayerPrevious.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVQueuePlayerPrevious.m; sourceTree = "<group>"; };
 		14690BC416DDE5D70078B311 /* begin_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = begin_button.png; sourceTree = "<group>"; };
@@ -110,6 +112,8 @@
 		14DB86C616A0BEB400D54CDA = {
 			isa = PBXGroup;
 			children = (
+				14494E3216F161C800155315 /* Default-568h@2x.png */,
+				14494E3016F161A900155315 /* Default.png */,
 				145F0A1E16E0312B000634FD /* intervalIconSuperSmall.png */,
 				145F0A1C16E030D9000634FD /* intervalIconSmall.png */,
 				1429266416BCEE420033CE87 /* basicbeep.caf */,
@@ -179,12 +183,11 @@
 		14DB871A16A0EDDC00D54CDA /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				145F0A1A16DEE2DC000634FD /* Default-568h@2x.png */,
 				145F0A2016E04D75000634FD /* white.png */,
-				145F0A2416E05057000634FD /* Default@2x.png */,
 				145F0A0E16DEB119000634FD /* Default.png */,
 				14494E2B16EE490400155315 /* clear_intervals_button.png */,
 				14494E2916EE48FA00155315 /* add_intervals_button.png */,
-				145F0A1A16DEE2DC000634FD /* Default-568h@2x.png */,
 				145F0A0C16DEA550000634FD /* clear_playlist_button.png */,
 				145F0A0A16DEA54B000634FD /* add_music_button.png */,
 				145F0A0816DEA3A0000634FD /* pause_button.png */,
@@ -270,9 +273,10 @@
 				145F0A1D16E030DA000634FD /* intervalIconSmall.png in Resources */,
 				145F0A1F16E0312C000634FD /* intervalIconSuperSmall.png in Resources */,
 				145F0A2116E04D76000634FD /* white.png in Resources */,
-				145F0A2516E05057000634FD /* Default@2x.png in Resources */,
 				14494E2A16EE48FA00155315 /* add_intervals_button.png in Resources */,
 				14494E2C16EE490400155315 /* clear_intervals_button.png in Resources */,
+				14494E3116F161AA00155315 /* Default.png in Resources */,
+				14494E3316F161C800155315 /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -381,15 +385,15 @@
 		14DB86FC16A0BEB400D54CDA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer: Daniel Giovannelli (73URDRC3DC)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Daniel Giovannelli (73URDRC3DC)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Daniel Giovannelli";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Daniel Giovannelli";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "IntervalPlayer/IntervalPlayer-Prefix.pch";
 				INFOPLIST_FILE = "IntervalPlayer/IntervalPlayer-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "0E9F7F19-2370-4142-9E64-A698BCED0448";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "0E9F7F19-2370-4142-9E64-A698BCED0448";
+				PROVISIONING_PROFILE = "2F493D35-B2D3-4669-8FDF-64FD7C3E031B";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "2F493D35-B2D3-4669-8FDF-64FD7C3E031B";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -397,15 +401,15 @@
 		14DB86FD16A0BEB400D54CDA /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer: Daniel Giovannelli (73URDRC3DC)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Daniel Giovannelli (73URDRC3DC)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Daniel Giovannelli";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Daniel Giovannelli";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "IntervalPlayer/IntervalPlayer-Prefix.pch";
 				INFOPLIST_FILE = "IntervalPlayer/IntervalPlayer-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "0E9F7F19-2370-4142-9E64-A698BCED0448";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "0E9F7F19-2370-4142-9E64-A698BCED0448";
+				PROVISIONING_PROFILE = "2F493D35-B2D3-4669-8FDF-64FD7C3E031B";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "2F493D35-B2D3-4669-8FDF-64FD7C3E031B";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

@@ -79,7 +79,6 @@
         if (playlistToAssignTo == 1) {
             for (int i=0; i < [[mediaItemCollection items] count]; i++) {
                 MPMediaItem *item = [[mediaItemCollection items] objectAtIndex:i];
-                // This if statement ensures that the URL is valid before adding it to the array. This catches a specific corner case - music files bought from the iTunes store before 2009, which are encoded with iTunes's old DRM scheme, are not recognized as valid media items by AVPlayer and will crash the app if they are played. This prevents such items from ever being added to the playlist
                 if ([AVPlayerItem playerItemWithURL:[item valueForProperty:MPMediaItemPropertyAssetURL]]) {
                     [intervalOne addObject:item];
                 }
@@ -87,7 +86,6 @@
        } else if (playlistToAssignTo == 2) {
             for (int i=0; i < [[mediaItemCollection items] count]; i++) {
                 MPMediaItem *item = [[mediaItemCollection items] objectAtIndex:i];
-                // See above comment
                 if ([AVPlayerItem playerItemWithURL:[item valueForProperty:MPMediaItemPropertyAssetURL]]) {
                     [intervalTwo addObject:item];
                 }
