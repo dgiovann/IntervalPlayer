@@ -21,20 +21,22 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    // This checks the screen size of the phone. The FlipsideViewController nib does not auto resize well, so we use two different custom ones instead depending on the size of the screen
     if(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)
     {
         CGSize result = [[UIScreen mainScreen] bounds].size;
         if(result.height == 480)
         {
-            // This loads the smaller nib for older iPhone models. Unlike MainViewController, this nib does not auto resize well, so we use two different custom ones instead
+            // This loads the smaller nib for older iPhone models. 
             [[NSBundle mainBundle] loadNibNamed:@"FlipsideViewSmallScreen" owner:self options:nil];
         }
         if(result.height == 568)
         {
-            // larger nib for iPhone 5
+            // Larger nib for iPhone 5/larger screen
             [[NSBundle mainBundle] loadNibNamed:@"IntervalPlayerFlipsideViewController" owner:self options:nil];
         }
     }
+    // Reload the contents of the tableView which displays the current songs, in case they have been changed
     [songListView1 reloadData];
     [songListView2 reloadData];
 }
@@ -42,19 +44,21 @@
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 #pragma mark - Actions
 
 - (IBAction)done:(id)sender
 {
+    // Finishes the flipside controller, sending back to the main view controller
     [self.delegate flipsideViewControllerDidFinish:self];
 }
 
+// The following two methods add music to their respective playlists
 -(IBAction)addMusicToPlaylistOne:(id)sender
 {
     playlistToAssignTo = 1;
+    // Opens the 'media picker', which shows the list of songs for the user to select
     MPMediaPickerController *mediaPicker1 = [[MPMediaPickerController alloc] initWithMediaTypes: MPMediaTypeAny];
     mediaPicker1.delegate = self;
     mediaPicker1.allowsPickingMultipleItems = YES;
@@ -72,13 +76,17 @@
     [self presentViewController:mediaPicker2 animated:YES completion:nil];
 }
 
-
+// This method is called when the mediapicker is finished
 - (void) mediaPicker: (MPMediaPickerController *) mediaPicker didPickMediaItems: (MPMediaItemCollection *) mediaItemCollection
 {
+    // MediaItemColleciton is the colelciton of media items returned by the picker.
     if (mediaItemCollection) {
         if (playlistToAssignTo == 1) {
+            // Iterate over the collection, creating the AVPlayerItem lists as it goes.
+            // This is more tightly-coupled then I'd like; it shouldn't be in a view controller. I plan to refactor this out soon
             for (int i=0; i < [[mediaItemCollection items] count]; i++) {
                 MPMediaItem *item = [[mediaItemCollection items] objectAtIndex:i];
+                // Check to ensure that the AV player item is valid
                 if ([AVPlayerItem playerItemWithURL:[item valueForProperty:MPMediaItemPropertyAssetURL]]) {
                     [intervalOne addObject:item];
                 }
@@ -94,6 +102,7 @@
            NSLog(@"Error in mediaPicker");
        }
     }
+    // Reload the lists with the new song data
     [songListView1 reloadData];
     [songListView2 reloadData];
     [self dismissViewControllerAnimated:YES completion:nil];
@@ -101,9 +110,11 @@
 
 - (void) mediaPickerDidCancel: (MPMediaPickerController *) mediaPicker
 {
+    // This just gets rid of the mediapicker without updating the playlists if the picker is cancelled
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
+// These two methods just empty the respective playlists and then clear the listviews
 -(IBAction)clearPlaylistOne:(id)sender
 {
     [intervalOne removeAllObjects];
@@ -114,10 +125,12 @@
     [intervalTwo removeAllObjects];
     [songListView2 reloadData];
 }
+
 - (void)viewDidUnload {
     [super viewDidUnload];
 }
 
+// Standard methods to determine what displays in the tableview rows used to display media info
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     // Return the number of sections.

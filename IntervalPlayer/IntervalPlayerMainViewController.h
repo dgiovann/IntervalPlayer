@@ -5,6 +5,7 @@
 //  Created by Daniel Giovannelli on 1/11/13.
 //  Copyright (c) 2013 Daniel Giovannelli. All rights reserved.
 //
+// The primary view controller for the app
 
 #import "IntervalPlayerFlipsideViewController.h"
 #import "IntervalMusicPlayer.h"

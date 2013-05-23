@@ -5,6 +5,7 @@
 //  Created by Daniel Giovannelli.
 //  Copyright (c) 2013 IntervalPlayer. All rights reserved.
 //
+// IntervalMusicPlayer wraps two instances of AVQueuePlayer to switch between them at the defined intervals, and sends messages to update the view controller accordingly.
 
 #import <Foundation/Foundation.h>
 #import "AVQueuePlayerPrevious.h"

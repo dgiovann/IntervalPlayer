@@ -5,6 +5,7 @@
 //  Created by Daniel Giovannelli on 1/11/13.
 //  Copyright (c) 2013 Daniel Giovannelli. All rights reserved.
 //
+// This is a flipside view controller; a view controller designed to be tightly integrated with the main view controller. Data can be easily shared between the two.
 
 #import <UIKit/UIKit.h>
 #import <MediaPlayer/MediaPlayer.h>
@@ -13,7 +14,6 @@
 
 @class IntervalPlayerFlipsideViewController;
 
-// This is a flipside view controller; a view controller designed to be tightly integrated with the main view controller. Data can be easily shared between the two.
 
 @protocol IntervalPlayerFlipsideViewControllerDelegate
 - (void)flipsideViewControllerDidFinish:(IntervalPlayerFlipsideViewController *)controller;
