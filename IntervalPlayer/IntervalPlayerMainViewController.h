@@ -5,7 +5,7 @@
 //  Created by Daniel Giovannelli on 1/11/13.
 //  Copyright (c) 2013 Daniel Giovannelli. All rights reserved.
 //
-// The primary view controller for the app
+// The primary view controller for the app. It displays information based on the IntervalMusicPlayer class, and has IntervalFlipsideViewController as a flipside controller
 
 #import "IntervalPlayerFlipsideViewController.h"
 #import "IntervalMusicPlayer.h"
@@ -41,9 +41,10 @@
     NSString *artist;
     NSString *title;
 
-    // This app uses two alerts, one to confirm clearing the intervals and one if you try to start the playlists without creating any playlists
+    // This app uses three alerts, one to confirm clearing the intervals, one to add times to the interval list, and one if you try to start the playlists without creating any playlists
     UIAlertView *clearAlert;
     UIAlertView *intervalAlert;
+    UIAlertView *emptyAlert;
     
     // The text boxes used to determine the total play time
     IBOutlet UITextField *playForSeconds;
